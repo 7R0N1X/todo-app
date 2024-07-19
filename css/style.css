@@ -75,6 +75,7 @@ p {
 }
 
 .container .todo .task-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -128,4 +129,16 @@ p {
 .container .done .done-container .task-done>p {
   color: #78CFB0;
   text-decoration: line-through;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 640px) {
+  .container {
+    max-width: 100vh;
+    padding: 16px;
+  }
+
+  .container .insert-task>input {
+    width: 300px;
+  }
 }
