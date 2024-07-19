@@ -34,7 +34,8 @@ p {
   gap: 10px;
 }
 
-.container .insert-task>a {
+.container .insert-task>a,
+.container .todo .task-container .task .btn-container>a {
   display: flex;
   justify-content: center;
   align-items: center;
