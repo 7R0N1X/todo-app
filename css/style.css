@@ -110,3 +110,8 @@ p {
   flex-direction: column;
   gap: 17px;
 }
+
+.container .done .done-container .task-done>p {
+  color: #78CFB0;
+  text-decoration: line-through;
+}
