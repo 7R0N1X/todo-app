@@ -28,6 +28,7 @@ p {
 
 /* INSERT TASK */
 .container .insert-task {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +57,7 @@ p {
   outline: none;
 }
 
-.container .insert-task>img {
+.container .insert-task > img {
   width: 40px;
   height: 40px;
 }
@@ -139,6 +140,6 @@ p {
   }
 
   .container .insert-task>input {
-    width: 300px;
+    width: 100%;
   }
 }
