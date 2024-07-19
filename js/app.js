@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $addTask.addEventListener('click', handleAddTask)
   $taskContainer.addEventListener('click', handleTaskContainerClick)
+  $inputTask.addEventListener('keydown', handleEnterPress)
 
   function handleAddTask() {
     const input = $inputTask.value.trim()
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.target.parentElement.id === 'delete') {
       deleteTask(e)
     }
+  }
+
+  function handleEnterPress(e) {
+    if (e.key === 'Enter') handleAddTask()
   }
 
   function createTask() {
