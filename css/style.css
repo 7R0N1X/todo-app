@@ -97,9 +97,12 @@ p {
 .container .done .done-container .task-done>p {
   flex-grow: 1;
   color: #9E78CF;
-  max-width: 338px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.container .todo .task-container .task>p {
+  max-width: 338px;
 }
 
 .container .todo .task-container .task .btn-container {
