@@ -90,12 +90,16 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .container .todo .task-container .task>p,
 .container .done .done-container .task-done>p {
   flex-grow: 1;
   color: #9E78CF;
+  max-width: 338px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container .todo .task-container .task .btn-container {
