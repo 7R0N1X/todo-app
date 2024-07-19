@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0714;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  color: white;
+}
+
+.container {
+  max-width: 432px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INSERT TASK */
+.container .insert-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .insert-task>input {
+  width: 381px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #3E1671;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.container .insert-task>input:focus-visible {
+  outline: none;
+}
+
+.container .insert-task>img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* SECTION TODO */
+.container .todo,
+.container .done {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.container .todo>p,
+.container .done>p {
+  margin-bottom: 17px;
+}
+
+.container .todo .task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.container .todo .task-container .task {
+  width: 100%;
+  height: 75px;
+  padding: 0 20px;
+  background-color: #15101C;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .todo .task-container .task>p,
+.container .done .done-container .task-done>p {
+  flex-grow: 1;
+  color: #9E78CF;
+}
+
+.container .todo .task-container .task .btn-container {
+  display: flex;
+  gap: 8px;
+}
+
+.container .todo .task-container .task .btn-container .btn>svg {
+  color: #9E78CF;
+}
+
+.container .todo .task-container .task .btn-container .btn>svg:hover {
+  color: #3E1671;
+}
+
+/* SECTION DONE */
+.container .done .done-container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.container .done .done-container .task-done {
+  width: 100%;
+  height: 75px;
+  padding: 0 20px;
+  background-color: #15101C;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
