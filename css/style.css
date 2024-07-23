@@ -117,7 +117,8 @@ p {
   color: #9E78CF;
 }
 
-.container .todo .task-container .task .btn-container .btn>svg:hover {
+.container .todo .task-container .task .btn-container .btn>svg:hover,
+.container .done .done-container .task .btn-container .btn>svg:hover {
   color: #3E1671;
 }
 
