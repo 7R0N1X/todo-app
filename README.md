@@ -1,5 +1,5 @@
 # To-Do App
-![Screenshot](https://github.com/user-attachments/assets/3a59fe1f-646c-41c9-9942-a2a0ed090a82)
+![Screenshot](https://github.com/user-attachments/assets/cf2c594c-17a6-4847-84a4-35920ea5d361)
 
 ## Overview
 
