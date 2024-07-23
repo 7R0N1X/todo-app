@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  let count = 1
   let tasks = []
 
   const $inputTask = document.querySelector('#todo')
@@ -10,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const $todoCounter = document.querySelector('#todo-counter')
   const $doneCounter = document.querySelector('#done-counter')
 
+  tasks = JSON.parse(localStorage.getItem('tasks')) || []
+  createTask()
+
   $addTask.addEventListener('click', handleAddTask)
   $taskContainer.addEventListener('click', handleTaskContainerClick)
   $inputTask.addEventListener('keydown', handleEnterPress)
@@ -18,15 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = $inputTask.value.trim()
     if (input !== '') {
       let task = {
-        id: count,
+        id: Date.now(),
         task: input,
         done: false
       }
-      tasks.push(task)
+      tasks = [...tasks, task]
       createTask()
       cleanInput($inputTask)
       updateTodoCounter()
-      count++
     }
   }
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function createTask() {
+    syncLocalStorage()
     cleanTasks()
     updateTodoCounter()
     tasks.map(({ id, task, done }) => {
@@ -114,15 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function deleteTask(e) {
-    tasks = tasks.filter(task => task.id !== Number(e.target.parentElement.parentElement.parentElement.id))
+    tasks = tasks.filter(task => task.id !== Number(e.target.parentElement.parentElement.parentElement.id))    
     createTask()
   }
 
   function updateTodoCounter() {
-    const taskToDo = tasks.filter(task => task.done === false)
-    $todoCounter.textContent = taskToDo.length
-    const done = tasks.filter(task => task.done === true)
-    $doneCounter.textContent = done.length
+    $todoCounter.textContent = tasks.filter(task => task.done === false).length
+    $doneCounter.textContent = tasks.filter(task => task.done === true).length
   }
 
   function cleanInput(inputElement) {
@@ -133,10 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
     while ($taskContainer.firstChild) {
       $taskContainer.removeChild($taskContainer.firstChild)
     }
-
     while ($doneContainer.firstChild) {
       $doneContainer.removeChild($doneContainer.firstChild);
     }
+  }
+
+  function syncLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
   }
 
 })
