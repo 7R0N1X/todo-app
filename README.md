@@ -1,40 +1,26 @@
 # To-Do App
-![Screenshot](https://github.com/user-attachments/assets/cf2c594c-17a6-4847-84a4-35920ea5d361)
 
-## Overview
+Aplicación de lista de tareas creada para practicar desarrollo web con HTML, CSS y JavaScript. Esta aplicación sencilla permite a los usuarios agregar, eliminar y marcar tareas como completadas.
 
-This is a simple To-Do List application built with HTML, CSS, and JavaScript. It allows users to add, remove, and mark tasks as completed.
+## Instalación
 
-## Features
+### Clonar el repositorio
 
-- Add new tasks
-- Mark tasks as completed
-- Remove tasks
-- Clear all completed tasks
-- Responsive design
+```bash
+  git clone https://github.com/7R0N1X/todo-app.git
+  cd todo-app
+```
 
-## Technologies Used
+### Abrir la aplicación
 
-- **HTML**: Structure of the application
-- **CSS**: Styling and layout
-- **JavaScript**: Functionality and interactivity
+Abre index.html en tu navegador web preferido.
 
-## Installation
+## Tecnologías Utilizadas
 
-To get started with the To-Do List application:
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/7R0N1X/todo-app.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd todo-app
-   ```
-3. Open index.html in your preferred web browser.
+## Licencia
 
-## Contributing
-Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request. You can also open an issue to report bugs or request new features.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/7R0N1X/todo-app/blob/main/LICENSE)  file for details.
+Este proyecto es de código abierto bajo la [licencia MIT](https://github.com/7R0N1X/todo-app/blob/main/LICENSE).
